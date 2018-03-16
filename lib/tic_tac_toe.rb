@@ -20,9 +20,6 @@ class TicTacToe
   ]
   
   
-  
-  
-  
   #display_board
   def display_board()
     puts " #{@board[0]} | #{@board[1]} | #{@board[2]} "
@@ -43,7 +40,6 @@ class TicTacToe
   def move(index, current_player)
     @board[index] = current_player
   end
-  
   
   
   #position_taken?
@@ -115,6 +111,7 @@ class TicTacToe
         return v
       end
     end
+    
     WIN_COMBINATIONS.each do |v|
       if v.to_set.subset?(oSet)
         return v
